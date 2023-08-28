@@ -3,6 +3,8 @@ title: How to Write an RFD
 authors: 
 - Aaron Ogle
 state: committed
+tags:
+- rfd-process
 ---
 
 The RFD Process is modeled after the [RFD process from Oxide Computer](https://oxide.computer/blog/rfd-1-requests-for-discussion).
