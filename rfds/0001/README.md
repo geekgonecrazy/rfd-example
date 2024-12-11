@@ -9,7 +9,7 @@ tags:
 
 The RFD Process is modeled after the [RFD process from Oxide Computer](https://oxide.computer/blog/rfd-1-requests-for-discussion).
 
-RFD stands for Architecture Decision Record which are essentially RFC's but the idea being discussion is wanted vs RFC where its largely decided.  We want to encourage more collaborative engagement.
+RFD stands for Request For Discussion which are essentially RFC's but the idea being discussion is wanted vs RFC where its largely decided.  We want to encourage more collaborative engagement.
 
 ## When to use an RFD
 
