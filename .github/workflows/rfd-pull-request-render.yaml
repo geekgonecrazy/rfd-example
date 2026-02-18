@@ -1,0 +1,26 @@
+name: Build Pull Request RFD
+on: [push, pull_request]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  render-rfd:
+    name: Render RFD
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.19.0'
+      - uses: tj-actions/branch-names@v7
+        id: rfdnum
+      - name: Install RFD Client
+        run: |
+          go install github.com/geekgonecrazy/rfd-tool/cmd/rfd-client@latest
+      - name: Render and upload
+        env: 
+          RFD_SERVER: ${{ secrets.RFD_SERVER }}
+          RFD_TOKEN: ${{ secrets.RFD_TOKEN }}
+        run: |
+          rfd-client --folder $PWD/rfds --rfd ${{ steps.rfdnum.outputs.current_branch }}
