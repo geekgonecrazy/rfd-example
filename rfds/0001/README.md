@@ -1,8 +1,9 @@
 ---
 title: How to Write an RFD
-authors: 
+authors:
 - Aaron Ogle
 state: committed
+discussion: https://appdevtest123.rocket.chat/group/69964b51b14c08f3bde4038b
 tags:
 - rfd-process
 ---
