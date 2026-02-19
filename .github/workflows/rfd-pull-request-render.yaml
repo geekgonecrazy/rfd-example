@@ -23,7 +23,7 @@ jobs:
         id: branch
       - name: Install RFD Client
         run: |
-          go install github.com/geekgonecrazy/rfd-tool/cmd/rfd-client@latest
+          go install github.com/geekgonecrazy/rfd-tool/cmd/rfd-client@e4aa0ee603957e11a8e9b8b1038c4df0c0480df4
       - name: Render and upload
         env: 
           RFD_SERVER: ${{ secrets.RFD_SERVER }}
