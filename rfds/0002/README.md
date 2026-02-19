@@ -3,6 +3,7 @@ title: Webhook Integration for RFD Discussions
 authors:
 - aaron@example.com
 state: discussion
+discussion: https://appdevtest123.rocket.chat/group/699654dbb14c08f3bde403a8
 tags:
 - integration
 - rocket-chat
