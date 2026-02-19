@@ -3,7 +3,7 @@ title: Test RFD
 authors:
 - test@example.com
 state: ideation
-discussion: ""
+discussion: https://appdevtest123.rocket.chat/group/699656d8b14c08f3bde403c5
 tags:
 - test
 ---
