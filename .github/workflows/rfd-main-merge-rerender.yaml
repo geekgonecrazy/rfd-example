@@ -10,6 +10,8 @@ jobs:
   render-rfds:
     name: Render RFDs
     runs-on: ubuntu-latest
+    # Skip commits that only add discussion links (from rfd-tool automation)
+    if: "!contains(github.event.head_commit.message, 'Add discussion link for RFD')"
 
     steps:
       - uses: actions/checkout@v3
@@ -20,10 +22,10 @@ jobs:
         id: rfdnum
       - name: Install RFD Client
         run: |
-          go install github.com/geekgonecrazy/rfd-tool/cmd/rfd-client@caf219e9552db82c36029df2b54e31d0a32b0598
+          go install github.com/geekgonecrazy/rfd-tool/cmd/rfd-client@latest
       - name: Render and upload
         env: 
           RFD_SERVER: ${{ secrets.RFD_SERVER }}
           RFD_TOKEN: ${{ secrets.RFD_TOKEN }}
         run: |
-          rfd-client --folder $PWD/rfds --import
+          rfd-client --folder $PWD/rfds --import -skip-discussion
